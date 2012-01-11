@@ -12,12 +12,12 @@ Webapp - Med en liten domenemodell f.eks books. Repo med getAll og insert.
 
 Oppgaver: 
 1)
--Lage en tjeneste som henter en spesifk bok basert på id /books/{nummer}
--Lage til hørende view som viser boka. 
-2)
--Lage en tjeneste som sletter med delete-method /books/{id} 
--Endre tabellview til å ta en delete-link
--Knytte et onclick js-script for trigge tjenestekall 
+-Lage en tjeneste som henter en spesifk bok basert på id /books/{nummer} DONE
+-Lage til hørende view som viser boka.  DONE
+2) 
+-Lage en tjeneste som sletter med delete-method /books/{id}  DONE
+-Endre tabellview til å ta en delete-link DONE
+-Knytte et onclick js-script for trigge tjenestekall  DONE
 3)
 -Lage en tjeneste og view som oppdater en bok med update-method
 -La et js-script som populerer formen med rikitg bok. 
