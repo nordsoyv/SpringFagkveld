@@ -1,0 +1,39 @@
+Når:
+Vi kjører på torsdag 8 des. 1630
+
+Hva:
+Rest med Spring mvc og jquery ++
+
+Hva må vi lage:
+Webapp - Med en liten domenemodell f.eks books. Repo med getAll og insert. 
+-Enkel webside som viser to småviews: tabell med alle bøker og en form for insert 
+-Controller med to tjenster. 1) Hent alle bøker-tabell som html 2) post for nye bøker
+
+
+Oppgaver: 
+1)
+-Lage en tjeneste som henter en spesifk bok basert på id /books/{nummer}
+-Lage til hørende view som viser boka. 
+2)
+-Lage en tjeneste som sletter med delete-method /books/{id} 
+-Endre tabellview til å ta en delete-link
+-Knytte et onclick js-script for trigge tjenestekall 
+3)
+-Lage en tjeneste og view som oppdater en bok med update-method
+-La et js-script som populerer formen med rikitg bok. 
+-Endre tekst på submit-knapp samt onlclick-funksjon 
+
+4)Ajaxifiser delete
+-Endre spring context
+-Nye deps (til json-ting)
+-Endre metode i controller til å godta json. 
+-Lage et js som oppdaterer dom ifht jsonlisten med bøker du får tilbake fra tjenesten
+  
+5)Ajaxifiser insert 
+-Endre metoden i controller til å godta json
+-Gjennbruke js som oppdaterer listen med bøker
+ 
+
+ 
+
+
