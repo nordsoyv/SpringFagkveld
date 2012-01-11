@@ -9,18 +9,19 @@
 	SFK = {};
 	
 	SFK.deleteBook = function(id){
-		alert(id);
 		var deleteUrl = "books/" + id;
 		var request  = $.ajax({url: deleteUrl, type: "DELETE" } );
-		request.done = function(){
-			
-		};
-		request.fail = function(){
-			
-		};
+		request.done(function(){
+			//alert("DONE");
+			location.reload();
+		});
+		request.fail(function(){
+			alert("Ukjent error");
+		});
 		
 	};
 
+	
 	
 	$(document).ready(function (){
 		//ingenting enda
