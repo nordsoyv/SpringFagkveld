@@ -20,11 +20,49 @@
 		});
 		
 	};
+	
+	SFK.updateBook = function(id){
+		var titleId = "#title"+id;
+		var authorId = "#author"+id;
+		var titleObj =$(titleId);
+		var authorObj =$(authorId);
+		
+		var bookTitle = titleObj.html();
+		var bookAuthor = authorObj.html();
+		$("#title").val(bookTitle);
+		$("#author").val(bookAuthor);
+		
+		$("#button").hide();
+		$("#updateButton").fadeIn(1000);
+		
+		SFK.bookToUpdate = {id: id, author: bookAuthor, title: bookTitle};
+	};
+	
+	SFK.submitUpdate = function() {
+		SFK.bookToUpdate.author = $("#author").val();
+		SFK.bookToUpdate.title = $("#title").val();
+		
+		var jsonBook = JSON.stringify(SFK.bookToUpdate);
+		var updateUrl = "books/" + SFK.bookToUpdate.id;
+		var request  = $.ajax({
+			url: updateUrl, 
+			type: "PUT",
+			data : jsonBook,
+			dataType : "json",
+			contentType : "application/json; charset=utf-8"
+		});
+		
+		request.done(function(){
+			location.reload();
+		});
+		request.fail(function(){
+			alert("Ukjent error");
+		});
+	};
 
-	
-	
 	$(document).ready(function (){
-		//ingenting enda
+		$("#title").val("");
+		$("#author").val("");
 	});
 	
 	</script>

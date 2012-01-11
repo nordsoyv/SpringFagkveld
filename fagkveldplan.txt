@@ -12,28 +12,16 @@ Webapp - Med en liten domenemodell f.eks books. Repo med getAll og insert.
 
 Oppgaver: 
 1)
--Lage en tjeneste som henter en spesifk bok basert på id /books/{nummer} DONE
--Lage til hørende view som viser boka.  DONE
+-*REST* Lage en tjeneste som henter en spesifk bok basert på id /books/{nummer} DONE
+-*HTML* Lage til hørende view som viser boka.  DONE
 2) 
--Lage en tjeneste som sletter med delete-method /books/{id}  DONE
--Endre tabellview til å ta en delete-link DONE
--Knytte et onclick js-script for trigge tjenestekall  DONE
+-*REST* Lage en tjeneste som sletter med delete-method /books/{id}  DONE
+-*HTML* Endre tabellview til å ta en delete-link DONE
+-*Jquery* Knytte et onclick js-script for trigge tjenestekall  DONE
 3)
--Lage en tjeneste og view som oppdater en bok med update-method
--La et js-script som populerer formen med rikitg bok. 
--Endre tekst på submit-knapp samt onlclick-funksjon 
-
-4)Ajaxifiser delete
--Endre spring context
--Nye deps (til json-ting)
--Endre metode i controller til å godta json. 
--Lage et js som oppdaterer dom ifht jsonlisten med bøker du får tilbake fra tjenesten
-  
-5)Ajaxifiser insert 
--Endre metoden i controller til å godta json
--Gjennbruke js som oppdaterer listen med bøker
- 
-
+-*REST* Lage en tjeneste og view som oppdater en bok med update-method DONE
+-*jQuery* La et js-script som populerer formen med rikitg bok. DONE
+-*jQuery* Endre tekst på submit-knapp samt onlclick-funksjon. DONE
  
 
 

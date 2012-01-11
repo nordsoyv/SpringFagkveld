@@ -13,9 +13,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Handles requests for the application home page.
@@ -69,4 +71,13 @@ public class BookController {
 
 		return "redirect:/";
 	}
+	
+	@RequestMapping(value ="/books/{id}", method = RequestMethod.PUT)
+	public  @ResponseBody Book updateBook(@RequestBody Book book ,@PathVariable("id") Integer id){
+		Book oldBook = bookRepository.getBook(id);
+		oldBook.setAuthor(book.getAuthor());
+		oldBook.setTitle(book.getTitle());
+		return oldBook;
+	}
+	
 }
