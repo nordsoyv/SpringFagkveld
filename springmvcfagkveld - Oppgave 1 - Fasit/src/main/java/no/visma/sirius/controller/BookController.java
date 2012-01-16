@@ -45,13 +45,11 @@ public class BookController {
 		return "allBooks";
 	}
 
-	@RequestMapping(value="/book", method=RequestMethod.GET)
-	public String getBooks(ModelMap model, @RequestParam("bookId" ) Integer id ) {
-
+	@RequestMapping(value = "/books/{id}", method = RequestMethod.GET)
+	public String getBook(ModelMap model, @PathVariable("id") Integer id) {
 		List<Book> books = new ArrayList<Book>();
 		books.add(bookRepository.getBook(id));
 		model.addAttribute("books", books);
-		
 		return "allBooks";
 	}
 
