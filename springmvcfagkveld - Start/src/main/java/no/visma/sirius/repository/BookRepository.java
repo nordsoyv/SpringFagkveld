@@ -17,9 +17,9 @@ public class BookRepository {
 	
 	public BookRepository() {
 		books = new ArrayList<Book>();
-		books.add(new Book("Spring IN ACTION", "Craig Walls"));
-		books.add(new Book("Trist som faen", "Ari Behn"));
-		books.add(new Book("Hodejegerne", "Jo Nesbø"));
+		addBook(new Book("Spring IN ACTION", "Craig Walls"));
+		addBook(new Book("Trist som faen", "Ari Behn"));
+		addBook(new Book("Hodejegerne", "Jo Nesbø"));
 	}
 	
 	public List<Book> getAllBooks()
